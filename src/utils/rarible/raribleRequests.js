@@ -10,7 +10,7 @@ import { sign } from './lazyMint';
 
 export async function generateTokenId(contract, minter) {
   console.log('generating tokenId for', contract, minter);
-  const raribleTokenIdUrl = `${apiDomain}/protocol/v0.1/ethereum/nft/collections/${contract}/generate_token_id?minter=${minter}`;
+  const raribleTokenIdUrl = `${apiDomain}/v0.1/nft/collections/${contract}/generate_token_id?minter=${minter}`;
   const { data } = await axios.get(raribleTokenIdUrl);
 
   const { tokenId } = data;
@@ -66,7 +66,7 @@ export async function createLazyMint(
 }
 
 export async function putLazyMint(form) {
-  const raribleMintUrl = `${apiDomain}/protocol/v0.1/ethereum/nft/mints`;
+  const raribleMintUrl = `${apiDomain}/v0.1/nft/mints`;
   console.log(form);
   const raribleMintResult = await axios.post(
     raribleMintUrl,

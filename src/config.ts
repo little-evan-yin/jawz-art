@@ -1,7 +1,8 @@
 export type NETWORKS = 'MAINNET' | 'ROPSTEN' | 'RINKEBY';
 
 export const currentNetwork: NETWORKS = `MAINNET`;
-export const apiDomain: string = 'https://api.rarible.com';
+// export const apiDomain: string = 'https://api.rarible.com';
+export const apiDomain: string = 'https://ethereum-api.rarible.org'
 
 const creatorSplitKolbyPercentage = 50;
 
